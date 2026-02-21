@@ -1,0 +1,47 @@
+comandos
+- npm i -g @expo/ngrok
+- npx expo start --tunnel
+
+- npx expo start --dev-client --tunnel
+
+
+/////////////////////
+Si vas a subir tu app a la Play Store y querés que las notificaciones funcionen:
+
+1. Usar eas build --profile production --platform android
+Esto genera un .aab firmado listo para subir a la Play Store.
+//////////////
+
+
+
+generar apk
+para pruebas
+
+apk
+eas build --platform android --profile preview
+
+abb para usar con dev-client
+eas build --profile development --platform android
+
+
+para produccion
+
+npx eas build --platform android --profile production
+
+Perfil production = APK/AAB optimizado para Play Store.
+Incluye:
+ProGuard / R8 (Java/Kotlin minificado)
+Bundle de JS minificado
+Hermes activo
+Sin expo-dev-client
+Resultado: mucho más liviano (30–50 MB descargado por el usuario).
+
+
+
+NEXT
+proyectos de v0
+npm install --legacy-peer-deps
+
+
+bootstrap/tailwind
+ bsPrefix="btn".... quita la flecha de dropdown
